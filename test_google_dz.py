@@ -9,6 +9,7 @@ def test_search_selene_positive(browser_open):
 
 
 def test_search_selene_negative(browser_open):
-    browser.element('[name="q"]').type('asdddfssdf').press_enter()
-    browser.element('#search').should(have.no.text('Selene - Wikipedia'))
+    browser.element('[name="q"]').should(be.blank).type('dckdnvfvfdv').press_enter()
+    browser.element('#search').should(have.text('Selene - Wikipedia'))
     pass
+
